@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Student Survey</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007acc;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(24, 116, 173, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #005b99;
+        }
+
+        footer {
+            background-color: #007acc;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Student Survey</h1>
+    </header>
+    <main>
+        <form id="survey-form" action="evaluate.html" method="post">
+            <h2>Answer any 5 questions:</h2>
+            
+            <div id="question-container">
+                <!-- Question 1 -->
+                <label for="q1">1. How satisfied are you with your college experience so far?</label>
+                <input type="range" id="q1" name="q1" min="1" max="5" step="1" value="3">
+                <br><br>
+
+                <!-- Question 2 -->
+                <label for="q2">2. What is your favorite subject or major?</label>
+                <input type="text" id="q2" name="q2">
+                <br><br>
+
+                <!-- Question 3 -->
+                <label for="q3">3. How often do you participate in extracurricular activities?</label>
+                <select id="q3" name="q3">
+                    <option value="rarely">Rarely</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="frequently">Frequently</option>
+                </select>
+                <br><br>
+
+                <!-- Question 4 -->
+                <label for="q4">4. What challenges do you face as a college student?</label>
+                <textarea id="q4" name="q4" rows="4"></textarea>
+                <br><br>
+
+                <!-- Question 5 -->
+                <label for="q5">5. How do you manage your study time effectively?</label>
+                <input type="text" id="q5" name="q5">
+            </div>
+            
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 College Student Survey App</p>
+    </footer>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            window.location.href = 'evaluate.html';
+        });
+    </script>
+</body>
+</html>
